@@ -1,0 +1,16 @@
+<body class="green">
+  <p class="center large">Welcome To The Bad Cookie Clicker!</p>
+  <img class="img-center" src="https://vignette.wikia.nocookie.net/cookieclicker/images/5/5a/PerfectCookie.png/revision/latest?cb=20130827014912" alt="cookie">
+  <br>
+  <br>
+  <div class="center medium">
+    <%= form_with url: users_path do |f| %>
+      <%= f.label :name, "Please Enter Your Name" %> <br>
+      <%= f.text_field :name, name: "user[name]" %>
+      <%= f.submit "Let's Click" %>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="error"><%= flash[:error] %></p>
+    <% end %>
+  </div>
+</body>

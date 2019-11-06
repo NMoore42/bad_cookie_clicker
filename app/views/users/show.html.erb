@@ -1,0 +1,18 @@
+<body class="green">
+  <p class="center large">Click Away!</p>
+  <%= form_with url: "#{@user.id}/cookies", method: "patch" do |f| %>
+    <%= image_submit_tag "https://vignette.wikia.nocookie.net/cookieclicker/images/5/5a/PerfectCookie.png/revision/latest?cb=20130827014912", :class => 'img-center' %>
+  <% end %>
+  <p class="center">Cookies: <%= @user.cookies %></p>
+  <p class="center">Cookies Per Click: <%= @cookies_per_click %></p>
+
+  <div class="token-left">
+    <% if @user.cookies > 99 %>
+      <img class="token" src="https://vignette.wikia.nocookie.net/cookieclicker/images/a/a0/GrandmaIconTransparent.png/revision/latest?cb=20181027162511" alt="grandma">
+
+    <% end %>
+  </div>
+
+
+
+</body>
